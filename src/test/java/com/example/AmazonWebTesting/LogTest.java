@@ -18,5 +18,6 @@ public class LogTest extends Basics {
         clickBy(By.id("continue"));
         setByXpath("//input[@type='password']","123456");
         clickBy(By.id("signInSubmit"));
+        Thread.sleep(5000);
     }
 }
