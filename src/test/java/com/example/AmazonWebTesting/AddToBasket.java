@@ -19,5 +19,16 @@ public class AddToBasket extends Basics {
         clickBy(By.id("add-to-cart-button"));
         Thread.sleep(5000);
     }
+    @Test // Text Apple to search box and go to 2nd page then add  random product to the cart.
+    public void AddRandomItem() throws InterruptedException{
+        clickBy(By.id("twotabsearchtextbox"));
+        setByXpath("//*[@id=\"twotabsearchtextbox\"]","Apple");
+        clickBy(By.id("nav-search-submit-button"));
+        PageScroll();
+        clickBy(By.xpath("//*[@class='a-pagination']/li[3]"));
+        Thread.sleep(5000);
+        RandomItem();
+        Thread.sleep(5000);
+    }
 
 }
